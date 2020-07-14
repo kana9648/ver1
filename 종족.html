@@ -13,24 +13,40 @@
 
 	<div id="grid">
 
-		<ol>
-
-			<li><a href="%EC%A2%85%EC%A1%B1.html">종족</a></li>
-			<li><a href="스탯.html">스탯</a></li>
+		<ol id = "link">
 		</ol>
 
 		<div>
-			<ul>
-				<li><a href="/ver1/종족/인간.html">인간</a></li>
-				<li><a href="/ver1/종족/엘프.html">엘프</a></li>
-				<li><a href="/ver1/종족/드워프.html">드워프</a></li>
-				<li><a href="/ver1/종족/뱀파이어.html">뱀파이어</a></li>
-				<li><a href="/ver1/종족/마물.html">마물</a></li>
+			<ul id = "link2">
 			</ul>
 		</div>
 		<div>
 
 		</div>
 	</div>
+		<script>
+		let coworkers = ["종족", "스탯"]
+		let 종족 = ["인간", "엘프", "드워프", "뱀파이어", "마물"]
+
+		function MakeList(arr, id) {
+			let lists = ``
+			for (let i = 0; i < arr.length; i++) {
+				lists += '<li><a href=/ver1/' + arr[i] + '.html>' + arr[i] + '</a></li>'
+			}
+			document.getElementById(id).innerHTML = lists;
+		}
+
+		function MakeList(arr, id) {
+			let lists = ``
+			for (let i = 0; i < arr.length; i++) {
+				lists += '<li><a href=/ver1/종족/' + arr[i] + '.html>' + arr[i] + '</a></li>'
+			}
+			document.getElementById(id).innerHTML = lists;
+		}
+
+
+		MakeList(coworkers, "link")
+		MakeList(종족, "link2")
+	</script>
 	<a href="Project-E.html"><img src="img/hell.gif" width="100"></a>
 </body></html>
