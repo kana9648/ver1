@@ -11,12 +11,22 @@
 <body>
 	<h1>Project-E</h1>
 
+
+	<script>
+		var coworkers = ['종족', '스탯', 'ap']
+
+	</script>
 	<div id="grid">
 
 		<ol>
+			<script>
+				var i = 0;
+				while (i < coworkers.length) {
+					document.write('<li><a herf="/ver1/' + coworkers[i] + '">' + coworkers[i] + '</a></li>');
+					i = i + 1;
+				}
 
-			<li><a href="%EC%A2%85%EC%A1%B1.html">종족</a></li>
-			<li><a href="스탯.html">스탯</a></li>
+			</script>
 		</ol>
 
 		<div></div>
