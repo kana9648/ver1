@@ -14,28 +14,43 @@
 
 	<div id="grid">
 
-		<ol>
+		<ol id="link">
 
-			<li><a href="%EC%A2%85%EC%A1%B1.html">종족</a></li>
-			<li><a href="스탯.html">스탯</a></li>
 		</ol>
 
 		<div>
-			<ul>
-				<li><a href="/ver1/스탯/공격.html">공격</a></li>
-				<li><a href="/ver1/스탯/방어.html">방어</a></li>
-				<li><a href="/ver1/스탯/체력.html">체력</a></li>
-				<li><a href="/ver1/스탯/행동력.html">행동력</a></li>
-				<li>마나</li>
-				<li>마력</li>
-				<li>정신력</li>
-				<li>속성</li>
+			<ul id="link2">
+
 			</ul>
 		</div>
 		<div>
 
 		</div>
 	</div>
+	<script>
+		let coworkers = ["종족", "스탯"]
+		let 스탯 = ["공격", "방어", "체력", "행동력", "마나", "마력", "정신력", "속성"]
+
+		function MakeList(arr, id) {
+			let lists = ``
+			for (let i = 0; i < arr.length; i++) {
+				lists += '<li><a href=/ver1/' + arr[i] + '.html>' + arr[i] + '</a></li>'
+			}
+			document.getElementById(id).innerHTML = lists;
+		}
+
+		function MakeList(arr, id) {
+			let lists = ``
+			for (let i = 0; i < arr.length; i++) {
+				lists += '<li><a href=/ver1/스탯/' + arr[i] + '.html>' + arr[i] + '</a></li>'
+			}
+			document.getElementById(id).innerHTML = lists;
+		}
+
+
+		MakeList(coworkers, "link")
+		MakeList(스탯, "link2")
+	</script>
 	<a href="Project-E.html"><img src="img/hell.gif" width="100"></a>
 </body>
 

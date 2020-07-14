@@ -15,22 +15,27 @@
 
 	<div id="grid">
 
-		<ol>
-			<script>
-				var coworkers = ['종족', '스탯']
-
-				var i = 0;
-				while (i < coworkers.length) {
-					document.write('<li><a href=/ver1/' + coworkers[i] + '.html>' + coworkers[i] + '</a></li>');
-					i = i + 1;
-				}
-
-			</script>
+		<ol id="link">
 		</ol>
 
 		<div></div>
 		<div></div>
 	</div>
+	<script>
+		let coworkers = ["종족", "스탯"]
+
+		function MakeList(arr, id) {
+			let lists = ``
+			for (let i = 0; i < arr.length; i++) {
+				lists += '<li><a href=/ver1/' + arr[i] + '.html>' + arr[i] + '</a></li>'
+			}
+			document.getElementById(id).innerHTML = lists;
+		}
+
+		MakeList(coworkers, "link")
+
+	</script>
+
 	<a href="Project-E.html"><img src="img/hell.gif" width="100"></a>
 </body>
 
