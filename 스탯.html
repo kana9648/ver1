@@ -39,7 +39,7 @@
 			document.getElementById(id).innerHTML = lists;
 		}
 
-		function MakeList(arr, id) {
+		function List(arr, id) {
 			let lists = ``
 			for (let i = 0; i < arr.length; i++) {
 				lists += '<li><a href=/ver1/스탯/' + arr[i] + '.html>' + arr[i] + '</a></li>'
@@ -49,7 +49,7 @@
 
 
 		MakeList(coworkers, "link")
-		MakeList(level, "link2")
+		List(level, "link2")
 	</script>
 	<a href="Project-E.html"><img src="img/hell.gif" width="100"></a>
 </body>
